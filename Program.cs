@@ -7,6 +7,8 @@ namespace AtomicFarm
         static void Main(string[] args)
         {
             new Farm().Run();
+            Console.ResetColor();
+            Console.ReadKey();
         }
     }
 }
