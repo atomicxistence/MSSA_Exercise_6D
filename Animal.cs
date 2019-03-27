@@ -1,13 +1,22 @@
-namespace CartoonFarm
+using System;
+
+namespace AtomicFarm
 {
     abstract class Animal
     {
-        private const int _speed = 10;
-        private Sex _gender;
-        private const int _lifespan = 20;
+        public virtual void Speak()
+        {
+            Console.Write("This animal says nothing.");
+        }
 
-        public abstract int Speed { get; }
-        public abstract Sex Gender { get; }
-        public abstract int Lifespan { get; }
+        public virtual void Feed()
+        {
+            Console.Write("This animal doesn't eat anything");
+        }
+
+        public virtual void Function()
+        {
+            Console.Write("This animal has no function.");
+        }
     }
 }

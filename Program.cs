@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CartoonFarm
+namespace AtomicFarm
 {
     class Program
     {

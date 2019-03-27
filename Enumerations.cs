@@ -1,4 +1,4 @@
-namespace CartoonFarm
+namespace AtomicFarm
 {
     public enum Sex
     {
