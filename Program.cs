@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace AtomicFarm
+namespace CartoonFarm
 {
     class Program
     {
         static void Main(string[] args)
         {
-            new Menu().Run();
+            new Farm().Run();
         }
     }
 }
