@@ -19,7 +19,8 @@ namespace AtomicFarm
 
         private void InitializeFarmAnimals()
         {
-            // new up the animals needed
+            barn = new List<Animal>();
+
         }
     }
 }

@@ -16,7 +16,7 @@ namespace AtomicFarm
 
         public override void Function()
         {
-            Console.Write("The cow makes milk and beef.");
+            Console.Write("The cow makes milk and is made of beef.");
         }
     }
 }

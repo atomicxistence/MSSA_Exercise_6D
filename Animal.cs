@@ -6,7 +6,7 @@ namespace AtomicFarm
     {
         public virtual void Speak()
         {
-            Console.Write("This animal says nothing.");
+            Console.Write("This animal has nothing to say.");
         }
 
         public virtual void Feed()
@@ -17,6 +17,11 @@ namespace AtomicFarm
         public virtual void Function()
         {
             Console.Write("This animal has no function.");
+        }
+
+        public virtual void Race()
+        {
+            Console.Write("This animal doesn't move.");
         }
     }
 }
