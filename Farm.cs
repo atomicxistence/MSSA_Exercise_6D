@@ -116,12 +116,20 @@ namespace AtomicFarm
         private void OneClassOneMethod()
         {
             ResetBeforePrintingLine();
+            Console.Write("Let's try talking to a cow.");
+            Console.ReadKey(true);
+
+            ResetBeforePrintingLine();
             new Cow().Speak();
             Console.ReadKey(true);
         }
 
         private void FourClassesOneMethod()
         {
+            ResetBeforePrintingLine();
+            Console.Write("You decide you want to race all the animals on the farm.");
+            Console.ReadKey(true);
+
             foreach (var animal in barn)
             {
                 ResetBeforePrintingLine();
@@ -132,24 +140,43 @@ namespace AtomicFarm
 
         private void FourClassesFourMethods()
         {
+            ResetBeforePrintingLine();
+            Console.Write("You try to talk to each animal.");
+            Console.ReadKey(true);
+
             foreach (var animal in barn)
             {
                 ResetBeforePrintingLine();
                 animal.Speak();
                 Console.ReadKey(true);
             }
+
+            ResetBeforePrintingLine();
+            Console.Write("You try to feed each animal.");
+            Console.ReadKey(true);
+
             foreach (var animal in barn)
             {
                 ResetBeforePrintingLine();
                 animal.Feed();
                 Console.ReadKey(true);
             }
+
+            ResetBeforePrintingLine();
+            Console.Write("You try to race each animal again, thinking they will be slower once they've eaten.");
+            Console.ReadKey(true);
+
             foreach (var animal in barn)
             {
                 ResetBeforePrintingLine();
                 animal.Race();
                 Console.ReadKey(true);
             }
+
+            ResetBeforePrintingLine();
+            Console.Write("You give up and ask the farmer why he keeps these animals in his barn.");
+            Console.ReadKey(true);
+
             foreach (var animal in barn)
             {
                 ResetBeforePrintingLine();
