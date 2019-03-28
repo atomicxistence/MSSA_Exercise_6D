@@ -30,8 +30,14 @@ namespace AtomicFarm
         }
         public void Run()
         {
-            PrintBarnGraphic();
-            PrintTitle();
+            InitializeGraphics();
+            Console.ReadKey(true);
+
+            OneClassOneMethod();
+            FourClassesOneMethod();
+            FourClassesFourMethods();
+
+            Console.ResetColor();
         }
 
         private void SetWindowOrigin()
@@ -53,6 +59,13 @@ namespace AtomicFarm
             };
         }
 
+        private void InitializeGraphics()
+        {
+            PrintBarnGraphic();
+            PrintTitle();
+            PrintPrompt("Press ENTER to continue");
+        }
+
         private void PrintTitle()
         {
             var title = "Welcome to the Atomic Farm!";
@@ -62,8 +75,8 @@ namespace AtomicFarm
 
             Console.ForegroundColor = ConsoleColor.White;
             Console.BackgroundColor = ConsoleColor.Red;
-            
-            Console.SetCursorPosition(origin.X + offsetX, origin.Y + offsetY);
+
+            Console.SetCursorPosition(origin.X + offsetX + 4, origin.Y + offsetY);
             Console.Write(title);
             Console.SetCursorPosition(origin.X + offsetX, origin.Y + offsetY + 1);
             Console.Write(subTitle);
@@ -77,6 +90,53 @@ namespace AtomicFarm
             {
                 Console.SetCursorPosition(origin.X, origin.Y + i);
                 Console.Write(graphic[i]);
+            }
+        }
+
+        private void PrintPrompt(string prompt)
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.BackgroundColor = ConsoleColor.Red;
+
+            Console.SetCursorPosition(origin.X + 20, origin.Y + 9);
+            Console.Write(prompt);
+        }
+
+        private void ResetBeforePrintingLine()
+        {
+            var underGraphic = origin.Y + graphic.Length + 1;
+
+            Console.ResetColor();
+            Console.SetCursorPosition(0, underGraphic);
+            Write.EmptySpace(Console.WindowWidth);
+
+            Console.SetCursorPosition(origin.X + 2, underGraphic);
+        }
+
+        private void OneClassOneMethod()
+        {
+            ResetBeforePrintingLine();
+            new Cow().Speak();
+            Console.ReadKey(true);
+        }
+
+        private void FourClassesOneMethod()
+        {
+            foreach (var animal in barn)
+            {
+                ResetBeforePrintingLine();
+                animal.Race();
+                Console.ReadKey(true);
+            }
+        }
+
+        private void FourClassesFourMethods()
+        {
+            foreach (var animal in barn)
+            {
+                ResetBeforePrintingLine();
+                //do stuff
+                Console.ReadKey(true);
             }
         }
     }

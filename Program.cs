@@ -6,9 +6,9 @@ namespace AtomicFarm
     {
         static void Main(string[] args)
         {
+            Console.CursorVisible = false;
+
             new Farm().Run();
-            Console.ResetColor();
-            Console.ReadKey();
         }
     }
 }
