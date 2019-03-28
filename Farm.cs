@@ -135,7 +135,25 @@ namespace AtomicFarm
             foreach (var animal in barn)
             {
                 ResetBeforePrintingLine();
-                //do stuff
+                animal.Speak();
+                Console.ReadKey(true);
+            }
+            foreach (var animal in barn)
+            {
+                ResetBeforePrintingLine();
+                animal.Feed();
+                Console.ReadKey(true);
+            }
+            foreach (var animal in barn)
+            {
+                ResetBeforePrintingLine();
+                animal.Race();
+                Console.ReadKey(true);
+            }
+            foreach (var animal in barn)
+            {
+                ResetBeforePrintingLine();
+                animal.Function();
                 Console.ReadKey(true);
             }
         }
