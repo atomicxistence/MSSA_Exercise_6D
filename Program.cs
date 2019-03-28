@@ -7,7 +7,8 @@ namespace AtomicFarm
         static void Main(string[] args)
         {
             Console.CursorVisible = false;
-
+            Console.OutputEncoding = System.Text.Encoding.Unicode;
+            
             new Farm().Run();
         }
     }
